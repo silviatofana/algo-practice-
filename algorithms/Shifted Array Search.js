@@ -45,7 +45,11 @@ function shiftedArrSearch(shiftArr, num) {
   console.log(result);
   
   /*
-  Time Complexity: the time complexity of findPivotPoint is O(log((N)) since it’s essentially a slightly modified version of the binary search algorithm. The time complexity of binarySearch is obviously O(log((N)) as well. The total time complexity is therefore O(log((N)).
-  Space Complexity: throughout the entire algorithm we used only a constant amount of space, hence the space complexity is O(1).
+  Time Complexity: the time complexity of findPivotPoint is O(log((N)) 
+  since it’s essentially a slightly modified version of the binary search algorithm.
+   The time complexity of binarySearch is obviously O(log((N)) as well.
+    The total time complexity is therefore O(log((N)).
+  Space Complexity: throughout the entire algorithm we used only a constant amount of space, 
+  hence the space complexity is O(1).
   */
   
