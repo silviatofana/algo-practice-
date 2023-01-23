@@ -85,7 +85,9 @@ function sortKMessedArray(arr, k) {
       heapArr.insert(arr[i]);
     }
   
-    //iterate through the rest of the array and mutate the array from the beginning while changing the heap
+    //iterate through the rest of the array and
+     mutate the array from the beginning 
+     while changing the heap
     for (let i = k + 1; i < arr.length; i++) {
       arr[i - (k + 1)] = heapArr.popMin();
       heapArr.insert(arr[i]);
