@@ -57,7 +57,8 @@ function sortKMessedArray(arr, k):
     for i from 0 to k:
         arr[n-k-1 + i] = h.extractMin()
     return arr
-    Time Complexity: building a heap takes O(K) time for K+1 elements. Insertion into and extraction from the min-heap take O(log(K)), each. Across all three loops, we do at least one of these actions N times, so the total time complexity is O(N⋅log(K)). if K is substantially smaller than N, then we can consider log(K) constant and argue that the complexity is practically linear.
+    Time Complexity: building a heap takes O(K) time for K+1 elements. 
+    Insertion into and extraction from the min-heap take O(log(K)), each. Across all three loops, we do at least one of these actions N times, so the total time complexity is O(N⋅log(K)). if K is substantially smaller than N, then we can consider log(K) constant and argue that the complexity is practically linear.
 */
 
 function sortKMessedArray(arr, k) {
