@@ -25,10 +25,10 @@ function flip(arr,k){
           maxIndex=j;
         }
       }
-   //   if(maxIndex !=i){
-        flip(arr,maxIndex);
-        flip(arr,i);
-   //   }
+     if(maxIndex !=i){
+        flip(arr,maxIndex+1);
+        flip(arr,i+1);
+     }
     }
     return arr;
   }
