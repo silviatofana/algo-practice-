@@ -1,0 +1,34 @@
+/*input:  arr = [1, 5, 4, 3, 2]
+
+output: [1, 2, 3, 4, 5] # to clarify, this is pancakeSort's output */
+
+function flip(arr,k){
+    let start=0;
+    let end=k-1;
+    while(start<end){
+      let temp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = temp;
+      start++;
+      end--;
+    }
+    return arr;
+  }
+  
+  function pancakeSort(arr) {
+    // your code goes here
+    let n = arr.length;
+    for(let i=n-1; i>=1; i--){
+      let maxIndex = 0;
+      for(let j=0; j<=i; j++){
+        if(arr[j]>arr[maxIndex]){
+          maxIndex=j;
+        }
+      }
+   //   if(maxIndex !=i){
+        flip(arr,maxIndex);
+        flip(arr,i);
+   //   }
+    }
+    return arr;
+  }
