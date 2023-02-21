@@ -1,0 +1,17 @@
+def calcDroneMinEnergy(route):
+    # Calculate the difference in altitude between the first and last points
+    diff = route[-1][2] - route[0][2]
+    
+    # Initialize the minimum energy to the difference
+    min_energy = diff
+    
+    # Loop through the route, starting from the second point
+    for i in range(1, len(route)):
+        # Calculate the difference in altitude between the current point and the previous point
+        curr_diff = route[i][2] - route[i-1][2]
+        
+        # If the drone descends, add the difference to the minimum energy
+        # Otherwise, subtract the difference from the minimum energy
+        min_energy = max(min_energy - curr_diff, diff)
+        
+    return min_energy
