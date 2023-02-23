@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hand Clock</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #clock {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 10px solid #000;
+      }
+      .hand {
+        position: absolute;
+        width: 1px;
+        height: 60%;
+        background-color: #000;
+        transform-origin: 50% 100%;
+      }
+      #hour-hand {
+        height: 40%;
+        width: 3px;
+        background-color: red;
+      }
+      #minute-hand {
+        height: 55%;
+        width: 2px;
+        background-color: blue;
+      }
+      #second-hand {
+        height: 70%;
+        width: 1px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock"></div>
+    <script>
+      function moveHands() {
+        const now = new Date();
+        const hours = now.getHours() % 12;
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const hourAngle = (hours * 30) + (minutes * 0.5);
+        const minuteAngle = minutes * 6;
+        const secondAngle = seconds * 6;
+        document.getElementById("hour-hand").style.transform = `rotate(${hourAngle}deg)`;
+        document.getElementById("minute-hand").style.transform = `rotate(${minuteAngle}deg)`;
+        document.getElementById("second-hand").style.transform = `rotate(${secondAngle}deg)`;
+      }
+      moveHands();
+      setInterval(moveHands, 1000);
+    </script>
+  </body>
+</html>
