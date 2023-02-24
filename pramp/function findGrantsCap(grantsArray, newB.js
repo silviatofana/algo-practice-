@@ -1,4 +1,4 @@
-function findGrantsCap(grantsArray, newBudget) {
+ {
     grantsArray.sort((a, b) => a - b); // sort the grantsArray in ascending order
     let n = grantsArray.length;
     let total = 0;
